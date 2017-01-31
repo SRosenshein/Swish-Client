@@ -1,0 +1,19 @@
+{
+  "name": "swish-client",
+  "version": "1.0.0",
+  "description": "Swish Client-Side",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SRosenshein/Swish-Client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SRosenshein/Swish-Client/issues"
+  },
+  "homepage": "https://github.com/SRosenshein/Swish-Client#readme"
+}
