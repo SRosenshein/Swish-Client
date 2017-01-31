@@ -1,0 +1,14 @@
+/* OVERALL CSS */
+html {
+	height: 100%;
+	font-size: 100%;
+}
+
+body {
+	min-height: 100%;
+}
+
+/* HOME PAGE */
+.jumbotron {
+	background: transparent;
+}

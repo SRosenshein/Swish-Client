@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import css from '../styles/main.css';
 
 class App extends Component {
 	render() {
