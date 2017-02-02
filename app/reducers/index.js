@@ -3,6 +3,6 @@ import { routerReducer } from 'react-router-redux';
 
 import courtsReducer from './courtsReducer';
 
-const rootReducer = combineReducers({courtsReducer, routing: routerReducer});
+const rootReducer = combineReducers({courts: courtsReducer, routing: routerReducer});
 
 export default rootReducer;

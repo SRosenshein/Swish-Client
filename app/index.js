@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 
 //Import Components
 import App from './components/App';
@@ -8,9 +8,13 @@ import About from './components/About';
 import SwishContainer from './components/SwishContainer';
 
 //Import react router deps
-import { Route, IndexRoute, Router } from 'react-router';
+import { Route, IndexRoute, Router, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
-import store, {history } from './store';
+import { syncHistoryWithStore } from 'react-router-redux';
+import { configStore } from './store';
+
+const store = configStore();
+const history = syncHistoryWithStore(browserHistory, store);
 
 const router = (
 	<Provider store={store}>
@@ -24,5 +28,5 @@ const router = (
 	</Provider>
 );
 
-ReactDOM.render(router, document.getElementById('app'));
+render(router, document.getElementById('app'));
 
