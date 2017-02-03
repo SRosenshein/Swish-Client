@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchAllCourts } from '../actions/index';
-import css from '../styles/main.css';
 
 import Search from './Search';
 import Map from './Map';
@@ -22,9 +21,15 @@ class SwishContainer extends Component {
 			<div className="container-fluid">
 				<div className="row">
 					<div className="col-md-8 pull-left text-center">
-						<Search />
+						<div className="row" >
+							<div className="col-md-6">
+								<Search />
+							</div>
+							<div className="col-md-6">
+								<NewCourt />
+							</div>
+						</div>
 						<Map />
-						<NewCourt />
 					</div>
 					<div className="col-md-4 pull-right text-center">
 						<CourtDetails />
