@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { GoogleMap, Marker, withGoogleMap, InfoWindow } from 'react-google-maps';
 import { Link } from 'react-router';
+import { connect } from 'react-redux';
+import { selectCourt } from '../actions/index';
 
 const maxSize = <div style={{ height: '100%', width: '100%' }} />;
 const image = {
@@ -69,6 +71,7 @@ class Map extends Component {
 				return marker;
 			})
 		});
+		this.props.selectCourt(targetMarker);
 	}
 
 	handleMarkerClose(targetMarker) {
@@ -100,4 +103,4 @@ class Map extends Component {
 	}
 }
 
-export default Map;
+export default connect(null, { selectCourt })(Map);

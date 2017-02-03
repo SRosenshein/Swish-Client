@@ -19,3 +19,10 @@ export function fetchAllCourtsFailure(error) {
 		payload: error
 	};
 }
+
+export function selectCourt(court) {
+	return {
+		type: types.SELECT_COURT,
+		payload: court
+	};
+}
