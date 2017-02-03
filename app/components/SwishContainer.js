@@ -30,7 +30,9 @@ class SwishContainer extends Component {
 								<NewCourt />
 							</div>
 						</div>
-						<Map courtsList={this.props.courtsList} />
+						<div className="map-container">
+							<Map courtsList={this.props.courtsList} />
+						</div>
 					</div>
 					<div className="col-md-4 pull-right text-center">
 						<CourtDetails />
