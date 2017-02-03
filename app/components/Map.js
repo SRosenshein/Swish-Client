@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import { GoogleMap, withGoogleMap, Marker, InfoWindow } from 'react-google-maps';
 
@@ -6,28 +6,32 @@ const SwishGoogleMap = withGoogleMap(props => (
 	<GoogleMap
 		defaultZoom={15}
 		defaultCenter={{lat: 40.7829, lng: -73.9654}}
-	/>
+		options={{streetViewControl: false, mapTypeControl: false}} >
+		{props.courtsList.map(court => (
+			<Marker 
+				key={court.id}
+				position={{lat: parseFloat(court.latitude), lng: parseFloat(court.longitude)}}
+				defaultAnimation={2}
+				title={court.name} >
+			</Marker>
+		))}
+	</GoogleMap>
 ));
 
 class Map extends Component {
 	render() {
 		return (
 			<SwishGoogleMap
-				containerElement={<div style={{ height: 500, width: 600, margin: 'auto', padding: 15 }} />}
-				mapElement={
-					<div style={{height: '100%', width: '100%'}} />
-				}
+				containerElement={ <div className="map-container" /> }
+				mapElement={ <div style={{ height: '100%' }} /> }
+				courtsList={this.props.courtsList}
 			/>
 		);
 	}
 }
 
-// class Map extends Component {
-// 	render() {
-// 		return (
-// 			<h2>Map Component</h2>
-// 		);
-// 	}
-// }
+Map.propTypes = {
+	courtsList: PropTypes.array.isRequired
+}
 
 export default Map;

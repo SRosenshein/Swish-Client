@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchAllCourts } from '../actions/index';
+import Spinner from 'react-spinkit';
 
 import Search from './Search';
 import Map from './Map';
@@ -15,7 +16,7 @@ class SwishContainer extends Component {
 	render() {
 		console.log("render");
 		if (!this.props.courtsList.length > 0) {
-			return <h1>Loading...</h1>;
+			return <Spinner spinnerName="wandering-cubes" noFadeIn />;
 		}
 		return (
 			<div className="container-fluid">
@@ -29,7 +30,7 @@ class SwishContainer extends Component {
 								<NewCourt />
 							</div>
 						</div>
-						<Map />
+						<Map courtsList={this.props.courtsList} />
 					</div>
 					<div className="col-md-4 pull-right text-center">
 						<CourtDetails />
