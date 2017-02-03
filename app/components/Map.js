@@ -2,6 +2,11 @@ import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import { GoogleMap, withGoogleMap, Marker, InfoWindow } from 'react-google-maps';
 
+const image = {
+	url: require('../utils/img/bballPic.png'),
+	scaledSize: new google.maps.Size(20, 20)
+};
+
 const SwishGoogleMap = withGoogleMap(props => (
 	<GoogleMap
 		defaultZoom={15}
@@ -12,7 +17,8 @@ const SwishGoogleMap = withGoogleMap(props => (
 				key={court.id}
 				position={{lat: parseFloat(court.latitude), lng: parseFloat(court.longitude)}}
 				defaultAnimation={2}
-				title={court.name} >
+				title={court.name}
+				icon={image} >
 			</Marker>
 		))}
 	</GoogleMap>
