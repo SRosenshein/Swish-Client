@@ -13,6 +13,12 @@ body {
 	background: transparent;
 }
 
+/* APP PAGE */
+
+.spinner {
+	margin: 20% auto;
+}
+
 .map-container {
 	height: 500px;
 	width: 600px;

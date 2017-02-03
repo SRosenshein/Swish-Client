@@ -16,7 +16,7 @@ class SwishContainer extends Component {
 	render() {
 		console.log("render");
 		if (!this.props.courtsList.length > 0) {
-			return <Spinner spinnerName="wandering-cubes" noFadeIn />;
+			return <Spinner spinnerName="wandering-cubes" className="spinner" noFadeIn />;
 		}
 		return (
 			<div className="container-fluid">
