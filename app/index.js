@@ -6,6 +6,7 @@ import App from './components/App';
 import Home from './components/Home';
 import About from './components/About';
 import SwishContainer from './components/SwishContainer';
+import NewCourt from './components/NewCourt';
 
 //Import react router deps
 import { Route, IndexRoute, Router, browserHistory } from 'react-router';
@@ -23,6 +24,7 @@ const router = (
 				<IndexRoute component={Home} />
 				<Route path="about" component={About} />
 				<Route path="swish" component={SwishContainer} />
+				<Route path="swish/new" component={NewCourt} />
 			</Route>
 		</Router>
 	</Provider>

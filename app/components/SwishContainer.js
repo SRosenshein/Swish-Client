@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchAllCourts } from '../actions/index';
 import Spinner from 'react-spinkit';
+import { Link } from 'react-router';
 
 import Search from './Search';
 import Map from './Map';
@@ -27,7 +28,9 @@ class SwishContainer extends Component {
 								<Search />
 							</div>
 							<div className="col-md-6">
-								<NewCourt />
+								<Link to="/swish/new" className="btn btn-warning new-court-button">
+									Add new court
+								</Link>
 							</div>
 						</div>
 						<div className="map-container">

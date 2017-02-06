@@ -29,3 +29,9 @@ body {
 .panel {
 	margin: 20% auto;
 }
+
+.new-court-button {
+	font-size: 1.3rem;
+	margin-top: 25px;
+	margin-right: 15px
+}
