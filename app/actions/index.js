@@ -26,3 +26,9 @@ export function selectCourt(court) {
 		payload: court
 	};
 }
+
+export function createCourt(props) {
+	return {
+		type: types.CREATE_COURT
+	};
+}
