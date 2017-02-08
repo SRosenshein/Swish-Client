@@ -12,7 +12,7 @@ npm install
 npm run start
 ```
 
-![App Screenshot](./app/utils/img/swishPic.PNG)
+![App Screenshot](./app/utils/img/swish_screenshot.PNG)
 
 Included Key Dependencies:
 * react
